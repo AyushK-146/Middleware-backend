@@ -1,0 +1,37 @@
+TASK 2
+
+This task requires creation of Middleware to validate data and return back the result to the data
+collector to correct them.
+Possible invalidation could be as follows:
+a) Missing rows and/or columns.
+b) Missing data in a perticular cell.
+c) Monthly savings being more than monthly income
+d) Inappropriate Dates.
+
+Requirements:
+1. A database table with keys like the following:
+
+    CREATE TABLE client_income_data(
+    client_id SERIAL PRIMARY KEY,
+    client_email VARCHAR(255),
+    client_name VARCHAR(255), 
+    income_per_annum FLOAT,
+    savings_per_annum FLOAT,
+    mobile_number VARCHAR(15));
+
+2. A filtering code to find out the issues in the database.
+   This code will tell the data collector the missing validation points.
+
+Working:
+> Creation of database and inserting values
+> Finding if rows are valid or not
+> Finding if a perticular cell is valid or not
+> Returing the end results using POST.
+
+Pros:
+> Using this middleware can help in reduction of mistakes in data entry.
+> A proper message enables the user to know the relevant invalid points.
+
+Cons
+> The validation is limited to the instruction provided.
+> Intentionally left blank cells/rows become invalid.

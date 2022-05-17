@@ -1,0 +1,20 @@
+TASK 3
+
+This task requires transfer of data into Google sheet and generate CRM.
+This simple task could be achived by converting csv to xls.
+
+Requirements:
+a) A dataset
+b) A code to convert into excel.
+
+Working:
+The backend codes convert the relevant dataset in csv into excel.
+
+Pros:
+> The code is simple and can convert the csv to xls.
+> If deployed on a dyanmic server this could be used as a failsafe and can scale to cases 
+  like millions of responses
+
+Cons:
+> Proper deployment is necessary
+

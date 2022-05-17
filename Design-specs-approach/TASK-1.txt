@@ -1,0 +1,44 @@
+DESIGN SPECIFICATION ATLAN-BACKEND
+
+TASK 1
+
+This Task required a middleware in which clients could search for slangs in response for an answer based on cities
+Requirements:
+1. Database- A vast database is needed, preferabely a multilingual one. This will help in globality of the design
+2. API- Translate api is to be developed to use the database and conduct opeations.
+
+Working:
+> The database will act as a repositiory of slangs in English and colloquial language, each having seperate tables
+> Based on user interaction and input the database will match the foreign key of each table.
+> Based on the quary the relevant result will be displayed.
+> Below is a simple demonstration
+     A. TABLE wordlang
+
+        | word_ID | word | lang |
+        | :-----: | :-: | :-: |
+        | 1       | "Move away" |  "Go" |
+     B. TABLE wordslang
+
+        | lang_ID | word | slang |
+        | :-----: | :-: | :-: |
+        |  "Go"   | "Move away" |  "Chal Hatt" |
+
+Alternative Working:
+> Various pre-developed tools and APIs could be integrated to make the process smooth.
+> Google Translate API amongst others provides a simple way for the translation.
+> A token form the same could be embedded into the codebase.
+
+Constraints :
+~ With millon of data in the world it is near to impossible to develop a database large enough to 
+  store all possible local slangs
+  and their corresponding English versions. 
+~ Thus the basic requirement is not met which tells the developer to make a fail safe middleware.
+~ One more drawback is that proper modelling is needed to give accurate results for a perticular search.
+
+Solutions:
+~ The constraint is revoked by integration with Google Translate API
+~ Google Translate API is hosted on Google Servers which run round the clock. This can make the 
+  design failsafe.
+~ The API used is properly modeled hence the results are more accurate and local.
+
+

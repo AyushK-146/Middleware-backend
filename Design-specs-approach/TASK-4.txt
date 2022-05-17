@@ -1,0 +1,18 @@
+TASK 4
+
+A recent client partner wanted us to send an SMS to the customer whose details are
+collected in the response as soon as the ingestion was complete reliably. The content
+of the SMS consists of details of the customer, which were a part of the answers in
+the response. This customer was supposed to use this as a “receipt” for them having
+participated in the exercise.
+Creating a Middleware to send message to user/client after successfully recording a response.
+
+Working:
+> Make a code to send sms after successful record of response.
+
+Pros:
+> If deployed on a dyanmic server this could be used as a failsafe and can scale to cases 
+  like millions of responses
+
+Cons:
+> Proper deployment is necessary
